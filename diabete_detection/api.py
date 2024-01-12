@@ -39,7 +39,11 @@ def predict_diabetes():
 if __name__ == '__main__':
     app.run(debug=True)
 
+# 1)-Headers
+# Content-Type = application/json
 
+# 2)-Body
+# -row
 # {
 #     "gender": "Female",
 #     "age": 60.0,
