@@ -1,4 +1,5 @@
 from flask import Flask, request, jsonify
+from flask_cors import CORS
 import pandas as pd
 from sklearn.linear_model import LogisticRegression
 
@@ -8,7 +9,7 @@ app = Flask(__name__)
 data = pd.read_csv('diabetes.csv')
 X = pd.get_dummies(data.drop('diabetes', axis=1))
 y = data['diabetes']
-
+CORS(app)  # Enable CORS for all routes
 # Endpoint to predict diabetes
 @app.route('/predict_diabetes', methods=['POST'])
 def predict_diabetes():
