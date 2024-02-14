@@ -7,7 +7,7 @@ from sklearn.linear_model import LogisticRegression
 app = Flask(__name__)
 
 # Load the dataset and pre-process
-data = pd.read_csv('diabetes.csv')
+data = pd.read_csv('C:\\Users\\1\\Desktop\\ML\\diabetes.csv')
 X = pd.get_dummies(data.drop('diabetes', axis=1))
 y = data['diabetes']
 CORS(app)  # Enable CORS for all routes
